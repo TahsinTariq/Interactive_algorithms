@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Tahsin Tariq <tahsinbanna@gmail.com>">
+
+    <title>Algorithms</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script src="sketch.js"></script>
+    <style>
+        #fps {
+            font-size: 12px;
+        }
+
+        .bg-color {
+            background-color: #ffffff;
+        }
+
+        .fg-color {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .nav-text-color {
+            color: #ebcb8b;
+        }
+
+        .text-color {
+            color: #000000;
+        }
+
+        .heading-color {
+            color: #a3be8c;
+        }
+
+        .nav-bg {
+            border-radius: 25em;
+            background-color: #3b4252;
+        }
+
+        a {
+            color: #d08770;
+        }
+
+        a:hover {
+            transition: color 0.5s;
+            color: #88c0d0;
+        }
+
+        /* button {
+            border-radius: 2em;
+            padding: 1em 1em;
+            border: none;
+            background-color: #4C566A;
+            color: #e5e9f0;
+            font-weight: bold;
+        } */
+
+        /* select {
+            border-radius: 0.5em;
+            padding: 0.75em 1em;
+            border: none;
+            background-color: #4C566A;
+            color: #e5e9f0;
+            font-weight: bold;
+        } */
+    </style>
+</head>
+
+<body class="bg-color">
+    <noscript>This page contains javascript content, please enable javascript in your browser.</noscript>
+    <!-- Navigation -->
+    <div class="p-3 container-lg fg-color">
+        <nav class="navbar navbar-expand-lg nav-text-color nav-bg static-top">
+            <a class="navbar-brand nav-text-color" href="https://tahsintariq.github.io">Interactive AI Algorithms</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item icon-github">
+                        <a class="nav-text-color" href="https://github.com/tahsintariq/Interactive_algorithms">Github
+                            repo</a>
+                    </li>
+                    <!-- <li class="nav-item">
+            <a class="nav-link" href="https://crates.io/crates/diffeq">Docs</a>
+          </li> -->
+                </ul>
+            </div>
+        </nav>
+        <!-- </div> -->
+
+        <!-- Content -->
+        <div class="container-lg">
+            <div class="col-lg-12">
+                <h2 class="mt-5 text-left heading-color">TITLE : </h2>
+                <p class="text-left">Yo! Rafi! This is a text element. Too bad you can't read without glasses. It looks
+                    gorgeous.
+                </p>
+                <!-- <p class="text-left">
+                    This is in class = "container-lg"
+                </p> -->
+            </div>
+        </div>
+        <div class="container-lg">
+            <div class="col-lg-12 ">
+                <div class="mt-5">
+                    <!-- Dropdown HTML -->
+                    <select name="algoriuthm" id="alg">
+                        <option value="" selected="selected">choose ya algoriuthm</option>
+                        <option value="bfs">BFS</option>
+                        <option value="dfs">DFS</option>
+                        <option value="ucs">UCS</option>
+                        <option value="a-star">A**********</option>
+                    </select>
+                    <!-- dropdown end -->
+                    <!-- <div class="col" id="canvas-for-p5"></div> -->
+                    <!-- jumbotron -->
+                    <div id="canvas-div-top">
+                        <div class="col" id="canvas-div">
+                        </div>
+                    </div>
+                </div>
+                <div class="row px-4 g-2">
+                    <div class="row align-middle col-6 p-3">
+                        <div class="col-2 text-center text-color">Speed</div>
+                        <div class="col">
+                            <input type="range" min="1" max="10" value="1" class="slider border col" id="range">
+                        </div>
+                    </div>
+                    <button class="p-3 col" id="play-pause">Pause Simulation</button>
+                    <script>
+                        let animationId = false;
+                        const isPaused = () => {
+                            return animationId;
+                        };
+
+                        const playPauseButton = document.getElementById("play-pause");
+
+                        const play = () => {
+                            playPauseButton.textContent = "Get Rekt bruh";
+                            // animationId = false;
+                            // renderLoop();
+                        };
+
+                        const pause = () => {
+                            playPauseButton.textContent = "Lol, You really thought I implimented this";
+                            // cancelAnimationFrame(animationId);
+                            animationId = true;
+                        };
+
+                        playPauseButton.addEventListener("click", event => {
+                            if (isPaused()) {
+                                play();
+                            } else {
+                                pause();
+                            }
+                        });
+                    </script>
+                    <button class="p-3 col" id="dest">Make Destination</button>
+                    <button class="p-3 col" id="source">Make Source</button>
+                </div>
+                <h2 class="mt-5 text-left heading-color">Controls</h2>
+                <p class="text-left text-color">
+                    Explain the UI here! If we ever finish this project that is.
+                </p>
+                <!-- <p class="text-left text-color">
+                    text to be added
+                </p> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
